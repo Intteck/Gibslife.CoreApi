@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="EntityFramework\EntityTypeConfigurations\Underwriting\PolicySections\**" />
+    <Compile Remove="Shared\_delete\**" />
+    <EmbeddedResource Remove="EntityFramework\EntityTypeConfigurations\Underwriting\PolicySections\**" />
+    <EmbeddedResource Remove="Shared\_delete\**" />
+    <None Remove="EntityFramework\EntityTypeConfigurations\Underwriting\PolicySections\**" />
+    <None Remove="Shared\_delete\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="8.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Gibs.Domain\Gibs7.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

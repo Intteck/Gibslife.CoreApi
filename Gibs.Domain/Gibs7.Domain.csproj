@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Entities\Claims\backup\**" />
+    <Compile Remove="Entities\Underwriting\RiskDetails\**" />
+    <Compile Remove="Entities\_Pending\**" />
+    <EmbeddedResource Remove="Entities\Claims\backup\**" />
+    <EmbeddedResource Remove="Entities\Underwriting\RiskDetails\**" />
+    <EmbeddedResource Remove="Entities\_Pending\**" />
+    <None Remove="Entities\Claims\backup\**" />
+    <None Remove="Entities\Underwriting\RiskDetails\**" />
+    <None Remove="Entities\_Pending\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Entities\Accounting\Journal.cs" />
+    <Compile Remove="Entities\Accounting\JournalDetail.cs" />
+    <Compile Remove="Entities\Accounting\Ledger.cs" />
+    <Compile Remove="Entities\Accounting\LedgerDetail.cs" />
+    <Compile Remove="Entities\Accounting\Period.cs" />
+    <Compile Remove="Entities\Accounting\ReportGroup.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Entities\Accounting\Asset\" />
+    <Folder Include="Entities\Accounting\Investment\" />
+    <Folder Include="Entities\Accounting\Reconciliation\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" Version="4.5.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="8.0.5" />
+  </ItemGroup>
+
+</Project>
